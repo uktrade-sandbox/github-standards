@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "packages": {
+    ".": {
+      "release-type": "python",
+      "pull-request-header": ":robot: Next release",
+      "pull-request-footer": " ",
+      "extra-files": [
+        {
+          "path": "uv.lock",
+          "type": "toml",
+          "jsonpath": "$.package[?(@.name.value=='github-standards')].version"
+        },
+        {
+          "path": "pyproject.toml",
+          "type": "toml",
+          "jsonpath": "$.project.version"
+        }
+      ]
+    }
+  }
+}

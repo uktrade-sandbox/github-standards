@@ -12,6 +12,8 @@ env:
 
 jobs:
   verify-release-version:
+    # Disable for now, while the release-please action is tested
+    if: false
     runs-on: ubuntu-latest
     permissions:
       contents: read
